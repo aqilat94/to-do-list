@@ -20,7 +20,7 @@ class CreateToDoListsTable extends Migration
             $table->string('description')->nullable();
             $table->date('date')->nullable();
             $table->boolean('reminder')->default('0');
-
+            $table->softDeletes();
             $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }
