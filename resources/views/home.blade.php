@@ -13,8 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    <button class="btn btn-primary" onclick="window.location='{{ route('index:list') }}'">To List</button>
                 </div>
             </div>
         </div>
